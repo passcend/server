@@ -1,36 +1,18 @@
-<p align="center">
-  <img src="https://github.com/bitwarden/brand/blob/main/screenshots/apps-combo-logo.png" alt="Bitwarden" />
-</p>
-<p align="center">
-  <a href="https://github.com/bitwarden/server/actions/workflows/build.yml?query=branch:main" target="_blank">
-    <img src="https://github.com/bitwarden/server/actions/workflows/build.yml/badge.svg?branch=main" alt="Github Workflow build on main" />
-  </a>
-  <a href="https://gitter.im/bitwarden/Lobby" target="_blank">
-    <img src="https://badges.gitter.im/bitwarden/Lobby.svg" alt="gitter chat" />
-  </a>
-</p>
+# Passcend Server
 
 ---
 
-The Bitwarden Server project contains the APIs, database, and other core infrastructure items needed for the "backend" of all bitwarden client applications.
+Passcend 서버 프로젝트는 모든 Passcend 클라이언트 애플리케이션의 백엔드를 위한 API, 데이터베이스 및 기타 핵심 인프라를 포함합니다.
 
-The server project is written in C# using .NET Core with ASP.NET Core. The database is written in T-SQL/SQL Server. The codebase can be developed, built, run, and deployed cross-platform on Windows, macOS, and Linux distributions.
+서버 프로젝트는 ASP.NET Core와 함께 .NET Core를 사용하여 C#으로 작성되었습니다. 데이터베이스는 T-SQL/SQL Server로 작성되었습니다. 코드베이스는 Windows, macOS 및 Linux 배포판에서 크로스 플랫폼으로 개발, 빌드, 실행 및 배포할 수 있습니다.
 
-## Developer Documentation
+## 개발자 문서
 
-Please refer to the [Server Setup Guide](https://contributing.bitwarden.com/getting-started/server/guide) in the [Contributing Documentation](https://contributing.bitwarden.com/) for build instructions, recommended tooling, code style tips, and lots of other great information to get you started.
+빌드 지침, 권장 도구, 코드 스타일 팁 등에 대한 자세한 내용은 프로젝트 문서를 참조하세요.
 
-## Deploy
+## 배포
 
-<p align="center">
-  <a href="https://github.com/orgs/bitwarden/packages" target="_blank">
-    <img src="https://i.imgur.com/SZc8JnH.png" alt="docker" />
-  </a>
-</p>
-
-You can deploy Bitwarden using Docker containers on Windows, macOS, and Linux distributions. Use the provided PowerShell and Bash scripts to get started quickly. Find all of the Bitwarden images on [GitHub Container Registry](https://github.com/orgs/bitwarden/packages).
-
-Full documentation for deploying Bitwarden with Docker can be found in our help center at: https://help.bitwarden.com/article/install-on-premise/
+Docker 컨테이너를 사용하여 Windows, macOS 및 Linux 배포판에 Passcend를 배포할 수 있습니다. 제공된 PowerShell 및 Bash 스크립트를 사용하여 빠르게 시작하세요.
 
 ### Requirements
 
@@ -42,33 +24,26 @@ _These dependencies are free to use._
 ### Linux & macOS
 
 ```sh
-curl -s -L -o bitwarden.sh \
-    "https://func.bitwarden.com/api/dl/?app=self-host&platform=linux" \
-    && chmod +x bitwarden.sh
-./bitwarden.sh install
-./bitwarden.sh start
+# Docker Compose를 사용한 설치
+docker-compose up -d
 ```
 
 ### Windows
 
 ```cmd
-Invoke-RestMethod -OutFile bitwarden.ps1 `
-    -Uri "https://func.bitwarden.com/api/dl/?app=self-host&platform=windows"
-.\bitwarden.ps1 -install
-.\bitwarden.ps1 -start
+# Docker Compose를 사용한 설치
+docker-compose up -d
 ```
 
-## We're Hiring!
+## 기여하기
 
-Interested in contributing in a big way? Consider joining our team! We're hiring for many positions. Please take a look at our [Careers page](https://bitwarden.com/careers/) to see what opportunities are currently open as well as what it's like to work at Bitwarden.
+코드 기여를 환영합니다! `main` 브랜치에 대해 Pull Request를 제출해주세요.
 
-## Contribute
+보안 감사 및 피드백을 환영합니다. 민감한 보안 문제는 비공개로 보고해주세요. 보안 정책은 [`SECURITY.md`](SECURITY.md) 파일을 참조하세요.
 
-Code contributions are welcome! Please commit any pull requests against the `main` branch. Learn more about how to contribute by reading the [Contributing Guidelines](https://contributing.bitwarden.com/contributing/). Check out the [Contributing Documentation](https://contributing.bitwarden.com/) for how to get started with your first contribution.
+## 원본 프로젝트
 
-Security audits and feedback are welcome. Please open an issue or email us privately if the report is sensitive in nature. You can read our security policy in the [`SECURITY.md`](SECURITY.md) file. We also run a program on [HackerOne](https://hackerone.com/bitwarden).
-
-No grant of any rights in the trademarks, service marks, or logos of Bitwarden is made (except as may be necessary to comply with the notice requirements as applicable), and use of any Bitwarden trademarks must comply with [Bitwarden Trademark Guidelines](https://github.com/bitwarden/server/blob/main/TRADEMARK_GUIDELINES.md).
+이 프로젝트는 [Bitwarden Server](https://github.com/bitwarden/server)를 기반으로 합니다.
 
 ### Dotnet-format
 
